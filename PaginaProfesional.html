@@ -1,76 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Profesional</title>
+    <title>Perfil Profesional — Dilan Buelvas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="profesional">
 
-    <header>
-        <h1>Bienvenido A Mi Sitio Personal</h1>
+
+    <header class="site-header pro">
+        <span class="site-title">Dilan Buelvas</span>
         <nav>
             <ul>
                 <li><a href="Inicio.html">Inicio</a></li>
-                <li><a href="PaginaPersonal.html">Pagina Personal</a></li>
+                <li><a href="PaginaPersonal.html">Página Personal</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="contenedor">
-        <div class="profesional">
-            <h2>Mi Perfil</h2>
-            <p>Soy Dilan Andres Buelvas,Estudiante de 5° semestre de Ingeniería de Software, con conocimientos en Java y fundamentos de backend y
-                frontend. Experiencia en creación y diseño básico de bases de datos. Manejo promedio de Spring Boot y
-                enfoque en
-                el aprendizaje continuo. Capacidad para trabajar en equipo, adaptabilidad rápida al cambio e iniciativa
-                para asumir
-                nuevos retos. Interés en realizar la práctica como ingeniero de software. .</p>
-        </div>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="pro-contenedor">
 
-        <div class="habilidades">
+        <!-- Sobre mí -->
+        <section class="pro-seccion" id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <p>Soy Dilan Andrés Buelvas, estudiante de 5.° semestre de Ingeniería de Software.
+                Cuento con conocimientos sólidos en Java, programación orientada a objetos y
+                estructuras de datos, junto con experiencia en desarrollo backend con Spring Boot
+                y Node.js con Express. Manejo JavaScript y TypeScript a nivel básico,
+                y nociones introductorias de Python. Tengo conocimientos en diseño y administración
+                de bases de datos relacionales con SQL Server, incluyendo modelado, normalización
+                y manejo de usuarios, roles y permisos. He trabajado en desarrollo de videojuegos
+                básicos con Unity y tengo nociones introductorias de ciberseguridad. Me caracterizo
+                por mi capacidad de análisis, trabajo en equipo, adaptabilidad y aprendizaje continuo.
+                Mi objetivo es aplicar estos conocimientos en mi práctica profesional como
+                desarrollador de software.</p>
+        </section>
+
+        <!-- Habilidades — tabla según documentación -->
+        <section class="pro-seccion" id="habilidades">
             <h2>Habilidades Técnicas</h2>
-            <ul>
+            <table class="tabla-habilidades">
+                <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Habilidad</th>
+                        <th>Nivel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lenguajes</td>
+                        <td>Java</td>
+                        <td>Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td>Lenguajes</td>
+                        <td>JavaScript</td>
+                        <td>Básico</td>
+                    </tr>
+                    <tr>
+                        <td>Lenguajes</td>
+                        <td>TypeScript</td>
+                        <td>Básico</td>
+                    </tr>
+                    <tr>
+                        <td>Lenguajes</td>
+                        <td>HTML y CSS</td>
+                        <td>Básico</td>
+                    </tr>
+                    <tr>
+                        <td>Lenguajes</td>
+                        <td>Python</td>
+                        <td>Básico</td>
+                    </tr>
+                    <tr>
+                        <td>Frameworks</td>
+                        <td>Spring Boot</td>
+                        <td>Básico–Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td>Frameworks</td>
+                        <td>Node.js / Express</td>
+                        <td>Básico–Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td>Bases de datos</td>
+                        <td>Diseño y modelado relacional (SQL)</td>
+                        <td>Intermedio–Alto</td>
+                    </tr>
+                    <tr>
+                        <td>Bases de datos</td>
+                        <td>Administración SQL Server</td>
+                        <td>Básico–Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td>Otros</td>
+                        <td>Unity — desarrollo de videojuegos</td>
+                        <td>Básico–Intermedio</td>
+                    </tr>
+                    <tr>
+                        <td>Otros</td>
+                        <td>Ciberseguridad</td>
+                        <td>Básico</td>
+                    </tr>
+                    <tr>
+                        <td>Blandas</td>
+                        <td>Trabajo en equipo · Adaptabilidad · Iniciativa</td>
+                        <td>—</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-                <li>HTML y CSS</li>
-                <li>Cibersseguridad Basico</li>
-                <li>Java</li>
-                <li>Spring Boot</li>
-                <li>Diseño de bases de datos</li>
-                <li>Desarrollo backend y frontend</li>
-                <li>Trabajo en equipo</li>
-                <li>Adaptabilidad</li>
-                <li>Iniciativa</li>
-            
-            </ul>
-        </div>
-
-
-        <div class="proyectos">
+        <!-- Proyectos -->
+        <section class="pro-seccion" id="proyectos">
             <h2>Proyectos Destacados</h2>
-            <ul>
-                <li><strong>Proyecto 1:</strong> Descripción breve del proyecto 1.</li>
-                <li><strong>Proyecto 2:</strong> Descripción breve del proyecto 2.</li>
-                <li><strong>Proyecto 3:</strong> Descripción breve del proyecto 3.</li>
-            </ul>
+            <div class="proyectos-grid">
+                <div class="proyecto-card">
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción breve del proyecto 1. Tecnologías usadas, objetivo y resultado.</p>
+                </div>
+                <div class="proyecto-card">
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción breve del proyecto 2. Tecnologías usadas, objetivo y resultado.</p>
+                </div>
+                <div class="proyecto-card">
+                    <h3>Proyecto 3</h3>
+                    <p>Descripción breve del proyecto 3. Tecnologías usadas, objetivo y resultado.</p>
+                </div>
+            </div>
+        </section>
 
-        </div>
-
-        <div class="contacto">
+        <!-- Contacto — formulario según documentación -->
+        <section class="pro-seccion" id="contacto">
             <h2>Contacto</h2>
-            <p>¿Tienes alguna pregunta o interés en mi perfil? ¡No dudes en contactarme!</p>
-            <ul>
-                <li><strong>Correo Electrónico:</strong> dilan.buelvas@example.com</li>
-                <li><strong>LinkedIn:</strong> linkedin.com/in/dilanbuelvas</li>
-                <li><strong>GitHub:</strong> github.com/dilanbuelvas</li>
-            </ul>
+            <p>¿Tienes alguna pregunta o interés en mi perfil? ¡No dudes en escribirme!</p>
+            <form class="form-contacto" action="#" method="post">
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                </div>
+                <div>
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
 
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer pro">
+        <p>Dilan Buelvas &copy; 2026 — Sitio personal hecho con HTML y CSS</p>
+        <div class="footer-iconos">
+            <a href="Inicio.html">← Volver al inicio</a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/shinmirada" target="_blank">GitHub</a>
         </div>
+    </footer>
 
-    </div>
 </body>
 
 </html>
