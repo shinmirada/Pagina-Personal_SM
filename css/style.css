@@ -1,106 +1,568 @@
-grid {
-    display: grid;
-    grid-template-areas:
-        "header  header"
-        "nav     nav"
-        "article aside"
-        "footer  footer";
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1100px;
-    margin: 0 auto;
+/* ============================================
+   VARIABLES GLOBALES
+   ============================================ */
+:root {
+    /* Paleta Profesional */
+    --pro-bg: #FFFFFF;
+    --pro-bg-card: #F5F5F5;
+    --pro-text: #1A1A1A;
+    --pro-text-soft: #555555;
+    --pro-accent: #2E2E2E;
+    --pro-border: #DDDDDD;
+    --pro-hover: #444444;
+
+    /* Paleta Personal (melancholic cozy) */
+    --per-bg: #F0EAF4;
+    --per-bg-card: #E8F0F7;
+    --per-text: #2E2E2E;
+    --per-text-soft: #7A7A8C;
+    --per-accent: #C9B8D8;
+    --per-accent-warm: #F2C4CE;
+    --per-border: #C9B8D8;
+
+    /* Tipografía */
+    --font-title-pro: 'Roboto', sans-serif;
+    --font-title-per: 'Playfair Display', serif;
+    --font-body: 'Nunito', sans-serif;
+
+    /* Espaciado base */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 48px;
+
+    /* Border radius */
+    --radius: 10px;
 }
 
-
-header  { grid-area: header;  }
-nav     { grid-area: nav;     }
-article { grid-area: article; }
-aside   { grid-area: aside;   }
-footer  { grid-area: footer;  }
-
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    font-size: 2.5rem;
-    border-radius: 6px;
- 
+/* ============================================
+   RESET Y BASE
+   ============================================ */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-nav {
-    background-color: #444;
-    border-radius: 6px;
-    padding: 10px 20px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-nav ul li a:hover {
-    background-color: #555;
-    border-radius: 4px;
-}
-
-
-article {
-    background-color: aquamarine;
-    padding: 20px;
-    border-radius: 6px;
-}
-
-article h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-article p {
+body {
+    font-family: var(--font-body);
+    font-size: 16px;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
-
-aside {
-    background-color: aquamarine;
-    padding: 20px;
-    border-radius: 6px;
+a {
+    text-decoration: none;
+    transition: color 0.2s, background-color 0.2s;
 }
 
-aside h3 {
-    margin-bottom: 10px;
-}
-
-aside ul {
+ul {
     list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ============================================
+   TIPOGRAFÍA — ESCALA H1–H6
+   ============================================ */
+h1 { font-size: 2.5rem;  font-weight: 700; }
+h2 { font-size: 1.8rem;  font-weight: 700; }
+h3 { font-size: 1.4rem;  font-weight: 600; }
+h4 { font-size: 1.2rem;  font-weight: 600; }
+h5 { font-size: 1rem;    font-weight: 400; }
+h6 { font-size: 0.875rem; font-weight: 400; }
+
+p  { font-size: 1rem; min-font-size: 14px; }
+
+
+/* ============================================
+   PÁGINA DE INICIO (index)
+   ============================================ */
+body.inicio {
+    background: linear-gradient(135deg, #F0EAF4 0%, #E8F0F7 100%);
+    color: var(--per-text);
+    font-family: var(--font-body);
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-aside ul li a {
-    color: #333;
-    text-decoration: none;
-}
-
-aside ul li a:hover {
-    text-decoration: underline;
-}
-
-
-footer {
-    background-color: #333;
-    color: white;
+.inicio-contenedor {
     text-align: center;
-    padding: 15px;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    max-width: 700px;
+}
+
+.inicio-contenedor h1 {
+    font-family: var(--font-title-per);
+    color: var(--per-text);
+    margin-bottom: var(--spacing-md);
+}
+
+.inicio-contenedor p {
+    color: var(--per-text-soft);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.8;
+}
+
+.inicio-botones {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-profesional {
+    background-color: var(--pro-accent);
+    color: #FFFFFF;
+    padding: 12px 32px;
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--pro-accent);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-profesional:hover {
+    background-color: var(--pro-hover);
+    border-color: var(--pro-hover);
+}
+
+.btn-personal {
+    background-color: transparent;
+    color: var(--per-text);
+    padding: 12px 32px;
+    border-radius: var(--radius);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--per-accent);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-personal:hover {
+    background-color: var(--per-accent-warm);
+    border-color: var(--per-accent-warm);
+    color: var(--per-text);
+}
+
+.inicio-footer {
+    margin-top: var(--spacing-xl);
+    color: var(--per-text-soft);
+    font-size: 0.875rem;
+}
+
+.inicio-footer a {
+    color: var(--per-accent);
+}
+
+.inicio-footer a:hover {
+    color: var(--per-accent-warm);
+}
+
+/* ============================================
+   HEADER COMPARTIDO
+   ============================================ */
+.site-header {
+    padding: var(--spacing-md) var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid;
+}
+
+/* Header profesional */
+.site-header.pro {
+    background-color: var(--pro-accent);
+    border-color: #111;
+}
+
+.site-header.pro .site-title {
+    color: #FFFFFF;
+    font-family: var(--font-title-pro);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.site-header.pro nav a {
+    color: #CCCCCC;
+    padding: 6px 14px;
     border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.site-header.pro nav a:hover {
+    background-color: var(--pro-hover);
+    color: #FFFFFF;
+}
+
+/* Header personal */
+.site-header.per {
+    background-color: rgba(240, 234, 244, 0.92);
+    backdrop-filter: blur(6px);
+    border-color: var(--per-border);
+}
+
+.site-header.per .site-title {
+    color: var(--per-text);
+    font-family: var(--font-title-per);
+    font-size: 1.3rem;
+}
+
+.site-header.per nav a {
+    color: var(--per-text-soft);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.site-header.per nav a:hover {
+    background-color: var(--per-accent-warm);
+    color: var(--per-text);
+}
+
+/* Nav lista */
+.site-header nav ul {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+/* ============================================
+   FOOTER COMPARTIDO
+   ============================================ */
+.site-footer {
+    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    font-size: 0.875rem;
+    margin-top: var(--spacing-xl);
+    border-top: 1px solid;
+}
+
+.site-footer.pro {
+    background-color: var(--pro-accent);
+    color: #CCCCCC;
+    border-color: #111;
+}
+
+.site-footer.pro a { color: #FFFFFF; }
+.site-footer.pro a:hover { text-decoration: underline; }
+
+.site-footer.per {
+    background-color: var(--per-bg-card);
+    color: var(--per-text-soft);
+    border-color: var(--per-border);
+}
+
+.site-footer.per a { color: var(--per-accent); }
+.site-footer.per a:hover { color: var(--per-accent-warm); }
+
+.footer-iconos {
+    margin-top: var(--spacing-sm);
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+/* ============================================
+   PÁGINA PROFESIONAL
+   ============================================ */
+body.profesional {
+    background-color: var(--pro-bg);
+    color: var(--pro-text);
+    font-family: var(--font-body);
+}
+
+.pro-contenedor {
+    max-width: 1000px;
+    margin: var(--spacing-xl) auto;
+    padding: 0 var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+/* Secciones generales profesional */
+.pro-seccion {
+    background-color: var(--pro-bg-card);
+    border: 1px solid var(--pro-border);
+    border-radius: var(--radius);
+    padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+.pro-seccion h2 {
+    font-family: var(--font-title-pro);
+    color: var(--pro-text);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--pro-accent);
+}
+
+.pro-seccion p {
+    color: var(--pro-text-soft);
+    line-height: 1.8;
+}
+
+/* Tabla de habilidades */
+.tabla-habilidades {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    font-size: 0.95rem;
+}
+
+.tabla-habilidades th {
+    background-color: var(--pro-accent);
+    color: #FFFFFF;
+    padding: 10px 16px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.tabla-habilidades td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--pro-border);
+    color: var(--pro-text-soft);
+}
+
+.tabla-habilidades tr:hover td {
+    background-color: #EEEEEE;
+}
+
+/* Proyectos */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.proyecto-card {
+    background-color: var(--pro-bg);
+    border: 1px solid var(--pro-border);
+    border-radius: var(--radius);
+    padding: var(--spacing-md);
+    transition: box-shadow 0.2s;
+}
+
+.proyecto-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+.proyecto-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--pro-text);
+}
+
+.proyecto-card p {
+    font-size: 0.93rem;
+    color: var(--pro-text-soft);
+}
+
+/* Formulario de contacto */
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.form-contacto label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--pro-text);
+    margin-bottom: 4px;
+    display: block;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--pro-border);
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    background-color: var(--pro-bg);
+    color: var(--pro-text);
+    transition: border-color 0.2s;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+    outline: none;
+    border-color: var(--pro-accent);
+}
+
+.form-contacto textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-contacto button {
+    align-self: flex-start;
+    background-color: var(--pro-accent);
+    color: #FFFFFF;
+    padding: 10px 28px;
+    border: none;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.form-contacto button:hover {
+    background-color: var(--pro-hover);
+}
+
+.form-contacto button:disabled {
+    background-color: var(--pro-border);
+    cursor: not-allowed;
+}
+
+/* ============================================
+   PÁGINA PERSONAL
+   ============================================ */
+body.personal {
+    background-color: var(--per-bg);
+    color: var(--per-text);
+    font-family: var(--font-body);
+}
+
+.per-contenedor {
+    max-width: 1000px;
+    margin: var(--spacing-xl) auto;
+    padding: 0 var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.per-seccion {
+    background-color: var(--per-bg-card);
+    border: 1px solid var(--per-border);
+    border-radius: var(--radius);
+    padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+.per-seccion h2 {
+    font-family: var(--font-title-per);
+    color: var(--per-text);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--per-accent);
+}
+
+.per-seccion p {
+    color: var(--per-text-soft);
+    line-height: 1.8;
+}
+
+/* Tarjetas de gameplays */
+.gameplays-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.gameplay-card {
+    background-color: var(--per-bg);
+    border: 1px solid var(--per-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.gameplay-card:hover {
+    box-shadow: 0 6px 20px rgba(201, 184, 216, 0.35);
+    transform: translateY(-3px);
+}
+
+.gameplay-card a {
+    display: block;
+    color: inherit;
+}
+
+.gameplay-thumbnail {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    background-color: var(--per-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.gameplay-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gameplay-info {
+    padding: var(--spacing-md);
+}
+
+.gameplay-info h3 {
+    font-family: var(--font-title-per);
+    font-size: 1rem;
+    color: var(--per-text);
+    margin-bottom: 6px;
+}
+
+.gameplay-info p {
+    font-size: 0.875rem;
+    color: var(--per-text-soft);
+    margin-bottom: 8px;
+}
+
+.gameplay-tag {
+    display: inline-block;
+    background-color: var(--per-accent);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 2px 10px;
+    border-radius: 20px;
+}
+
+/* Lista de gustos */
+.gustos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.gusto-tag {
+    background-color: var(--per-bg);
+    border: 1px solid var(--per-border);
+    color: var(--per-text-soft);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.gusto-tag:hover {
+    background-color: var(--per-accent-warm);
+    color: var(--per-text);
+    border-color: var(--per-accent-warm);
 }
