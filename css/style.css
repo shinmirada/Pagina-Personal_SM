@@ -536,11 +536,18 @@ body.personal {
 
 .gameplay-tag {
     display: inline-block;
-    background-color: var(--per-accent);
-    color: #fff;
+    background-color: var(--per-text);
+    color: var(--per-accent-warm);
     font-size: 0.75rem;
-    padding: 2px 10px;
+    font-weight: 700;
+    padding: 3px 12px;
     border-radius: 20px;
+}
+
+/* Tag "Sin mods" — variante más suave */
+.gameplay-tag.sin-mods {
+    background-color: var(--per-text-soft);
+    color: #FFFFFF;
 }
 
 /* Lista de gustos */
@@ -565,4 +572,53 @@ body.personal {
     background-color: var(--per-accent-warm);
     color: var(--per-text);
     border-color: var(--per-accent-warm);
+}
+
+/* ============================================
+   ICONOS REDONDOS EN FOOTER
+   ============================================ */
+.icon-circle-pro {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: #555555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.icon-circle-pro:hover {
+    background-color: #888888;
+}
+
+.icon-circle-per {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: var(--per-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.icon-circle-per:hover {
+    background-color: var(--per-text-soft);
+}
+
+.footer-inicio-link {
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+}
+
+.site-footer.pro .footer-inicio-link { color: #CCCCCC; }
+.site-footer.pro .footer-inicio-link:hover { color: #FFFFFF; }
+.site-footer.per .footer-inicio-link { color: var(--per-text-soft); }
+.site-footer.per .footer-inicio-link:hover { color: var(--per-text); }
+
+.inicio-footer .footer-iconos {
+    justify-content: center;
+    margin-top: 12px;
 }
