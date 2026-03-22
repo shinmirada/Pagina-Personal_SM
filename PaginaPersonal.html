@@ -5,16 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espacio Personal — Dilan Buelvas</title>
+
+    <!-- Fuentes externas -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600;700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Nunito:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos principales -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="personal">
 
+    <!-- =============================================
+         HEADER — fijo (sticky), paleta personal
+         Contiene: nombre del autor + nav principal
+         ============================================= -->
     <header class="site-header per">
         <span class="site-title">Dilan Buelvas</span>
         <nav>
@@ -25,8 +31,14 @@
         </nav>
     </header>
 
+    <!-- =============================================
+         CONTENIDO PRINCIPAL
+         Flexbox de 1 columna, max-width 1000px
+         Paleta melancholic cozy (pasteles suaves)
+         ============================================= -->
     <main class="per-contenedor">
 
+        <!-- Sección: Sobre mí personal -->
         <section class="per-seccion" id="sobre-mi">
             <h2>Sobre Mí</h2>
             <p>Soy Dilan Andrés Bulevas, soy introvertido y estoy creciendo de a poco. Me gustan los momentos
@@ -34,15 +46,14 @@
                 donde comparto lo que me gusta, sin pretensiones. Aquí hay un poco de quién soy más allá del código.</p>
         </section>
 
+        <!-- Sección: Mis gustos  -->
         <section class="per-seccion" id="gustos">
             <h2>Mis Gustos</h2>
             <p>Cosas que me gustan y forman parte de mí:</p>
             <div class="gustos-lista">
-                <span class="gusto-tag"> Videojuegos con temática retro 8-bit, historia enganchadora o gachas como
-                    Honkai Impact 3rd,</span>
+                <span class="gusto-tag"> Videojuegos con temática retro 8-bit, historia enganchadora o gachas como Honkai Impact 3rd,</span>
                 <span class="gusto-tag"> Lluvia,</span>
-                <span class="gusto-tag"> Música suave como piano, aunque también pop rock y música japonesa
-                    (especialmente ops de anime y Hatsune Miku),</span>
+                <span class="gusto-tag"> Música suave como piano, aunque también pop rock y música japonesa (especialmente ops de anime y Hatsune Miku),</span>
                 <span class="gusto-tag"> Hollow Knight,</span>
                 <span class="gusto-tag"> Honkai Impact 3rd,</span>
                 <span class="gusto-tag"> Date A Live Spirit Echo,</span>
@@ -55,13 +66,17 @@
             </div>
         </section>
 
+        <!-- Sección: Mis juegos (grid de tarjetas con imagen) -->
         <section class="per-seccion" id="juegos">
             <h2>Mis Juegos</h2>
             <p>Los juegos que más me han marcado últimamente:</p>
             <div class="gameplays-grid">
 
+                <!-- Tarjeta: Hollow Knight -->
                 <div class="gameplay-card">
-                    <div class="gameplay-thumbnail"><img src="icons/hollow.jpg" alt="Hollow Knight"></div>
+                    <div class="gameplay-thumbnail">
+                        <img src="icons/hollow.jpg" alt="Hollow Knight">
+                    </div>
                     <div class="gameplay-info">
                         <h3>Hollow Knight</h3>
                         <p>Un metroidvania oscuro y melancólico. Exploración, lore profundo y un desafío que engancha.
@@ -69,8 +84,11 @@
                     </div>
                 </div>
 
+                <!-- Tarjeta: Honkai Impact 3rd -->
                 <div class="gameplay-card">
-                    <div class="gameplay-thumbnail"><img src="icons/honkai.jpeg" alt="Honkai Impact 3rd"></div>
+                    <div class="gameplay-thumbnail">
+                        <img src="icons/honkai.jpeg" alt="Honkai Impact 3rd">
+                    </div>
                     <div class="gameplay-info">
                         <h3>Honkai Impact 3rd</h3>
                         <p>Un juego de acción en tercera persona con mecánicas de combate fluidas y una historia
@@ -79,19 +97,23 @@
                     </div>
                 </div>
 
+                <!-- Tarjeta: Hollow Knight Mods -->
                 <div class="gameplay-card">
-                    <div class="gameplay-thumbnail"><img src="icons/corte palida.jpeg" alt="Hollow Knight — Mods"></div>
+                    <div class="gameplay-thumbnail">
+                        <img src="icons/corte palida.jpeg" alt="Hollow Knight — Mods">
+                    </div>
                     <div class="gameplay-info">
                         <h3>Hollow Knight — Mods</h3>
                         <p>Explorando el juego de otra forma con mods de comunidad. Siempre hay algo nuevo que
                             descubrir. Principalmente mods de skins, Chara es la skin que más me gusta,
-                            el DLC de la corte pálida entre otros para pasar el rato y disfrutar del juego de otra forma
-                        </p>
+                            el DLC de la corte pálida entre otros para pasar el rato y disfrutar del juego de otra forma</p>
                     </div>
                 </div>
 
+                <!-- Tarjeta: Date A Live Spirit Echo -->
                 <div class="gameplay-card">
-                    <div class="gameplay-thumbnail"><img src="icons/date a live.jpeg" alt="Date A Live Spirit Echo">
+                    <div class="gameplay-thumbnail">
+                        <img src="icons/date a live.jpeg" alt="Date A Live Spirit Echo">
                     </div>
                     <div class="gameplay-info">
                         <h3>Date A Live Spirit Echo</h3>
@@ -102,28 +124,34 @@
                     </div>
                 </div>
 
+                <!-- Tarjeta: osu! -->
                 <div class="gameplay-card">
-                    <div class="gameplay-thumbnail"><img src="icons/osu!.png" alt="osu!"></div>
+                    <div class="gameplay-thumbnail">
+                        <img src="icons/osu!.png" alt="osu!">
+                    </div>
                     <div class="gameplay-info">
                         <h3>osu!</h3>
-                        <p>Un juego de ritmo, coordinación y reflejos. Me gusta mucho poder jugar las canciones
-                            favoritas
+                        <p>Un juego de ritmo, coordinación y reflejos. Me gusta mucho poder jugar las canciones favoritas
                             mías y otras que hay ahí para retarme. Si no está la canción, yo mismo creo el mapa.
                             Antes era muy principiante, pero poco después creo que soy un jugador bajo-medio.
                             En osu!mania 4k, 6k, 7k y 9k, los niveles más altos que puedo jugar son de 1 estrella hasta
-                            4,1
-                            estrellas máximo en 4k, los demás máximo 3,5 estrellas</p>
+                            4,1 estrellas máximo en 4k, los demás máximo 3,5 estrellas</p>
                     </div>
                 </div>
 
             </div>
         </section>
 
+        <!-- Sección: Gameplays (tarjetas con enlace a YouTube)
+             Cada tarjeta abre el video en YouTube al hacer clic.
+             Tag "con mods" = fondo oscuro / texto rosa
+             Tag "Sin mods" = fondo gris suave / texto blanco -->
         <section class="per-seccion" id="gameplays">
             <h2>Gameplays</h2>
             <p>Gameplays de mis juegos favoritos.</p>
             <div class="gameplays-grid">
 
+                <!-- Gameplay: Panteón 1 con mods -->
                 <div class="gameplay-card">
                     <a href="https://youtu.be/fF44BH6qBDQ" target="_blank" title="Ver gameplay en YouTube">
                         <div class="gameplay-thumbnail">
@@ -131,13 +159,13 @@
                         </div>
                         <div class="gameplay-info">
                             <h3>Gameplay panteon 1 con dlc corte palida y otros — Hollow Knight</h3>
-                            <p>me paso el panteon 1 de hollow knight usando amuletos del dlc corte palida y usando
-                                infinity notcheless.</p>
+                            <p>me paso el panteon 1 de hollow knight usando amuletos del dlc corte palida y usando infinity notcheless.</p>
                             <span class="gameplay-tag">con mods</span>
                         </div>
                     </a>
                 </div>
 
+                <!-- Gameplay: Grimm Pesadilla sin mods -->
                 <div class="gameplay-card">
                     <a href="https://youtu.be/tqTdB3nUO9I" target="_blank" title="Ver gameplay en YouTube">
                         <div class="gameplay-thumbnail">
@@ -146,10 +174,12 @@
                         <div class="gameplay-info">
                             <h3>Gameplay Grimm Pesadilla en radiante — Hollow Knight</h3>
                             <p>me paso a grimm rey de la pesadilla en radiante, depues de varios intentos.</p>
-                            <span class="gameplay-tag">Sin mods</span>
+                            <span class="gameplay-tag sin-mods">Sin mods</span>
                         </div>
                     </a>
                 </div>
+
+                <!-- Gameplay: Infinity Abyss — Honkai -->
                 <div class="gameplay-card">
                     <a href="https://youtu.be/c-zV2Bfs6PM" target="_blank" title="Ver gameplay en YouTube">
                         <div class="gameplay-thumbnail">
@@ -157,12 +187,12 @@
                         </div>
                         <div class="gameplay-info">
                             <h3>Gameplay infinity abbyss primeras dificultades — Honkai Impact 3rd</h3>
-                            <p>me paso las primeras 4 dificultades del primer boss de infinity abbyss en honkai impact
-                                3rd.</p>
+                            <p>me paso las primeras 4 dificultades del primer boss de infinity abbyss en honkai impact 3rd.</p>
                         </div>
                     </a>
                 </div>
 
+                <!-- Gameplay: Puertas del Sharam — Date A Live -->
                 <div class="gameplay-card">
                     <a href="https://youtu.be/JzgyahQF8sg" target="_blank" title="Ver gameplay en YouTube">
                         <div class="gameplay-thumbnail">
@@ -174,34 +204,44 @@
                         </div>
                     </a>
                 </div>
+
             </div>
         </section>
 
     </main>
 
+    <!-- =============================================
+         FOOTER — paleta personal
+         Contiene: copyright + enlace inicio
+                   + ícono GitHub + ícono YouTube
+         ============================================= -->
     <footer class="site-footer per">
         <p>Dilan Buelvas &copy; 2026 — Sitio personal hecho con HTML y CSS</p>
         <div class="footer-iconos">
+
+            <!-- Enlace de regreso al inicio -->
             <a href="index.html" class="footer-inicio-link" title="Volver al inicio">← Inicio</a>
+
+            <!-- Ícono GitHub (SVG inline) -->
             <a href="https://github.com/shinmirada" target="_blank" title="GitHub">
                 <div class="icon-circle-per">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
-                        <path
-                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                     </svg>
                 </div>
             </a>
+
+            <!-- Ícono YouTube (SVG inline) — solo aplica en esta sección pagina personal -->
             <a href="https://www.youtube.com/@shinmiradakun1613" target="_blank" title="Canal de YouTube">
                 <div class="icon-circle-per">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
-                        <path
-                            d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
                 </div>
             </a>
+
         </div>
     </footer>
 
 </body>
-
 </html>
