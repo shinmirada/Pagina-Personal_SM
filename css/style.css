@@ -1,26 +1,31 @@
 /* ============================================
    VARIABLES GLOBALES
+   Paleta dark mode integrada 
+   color-scheme: dark evita que el navegador
+   fuerce sus propios colores sobre los nuestros
    ============================================ */
 :root {
-    /* Paleta Profesional */
-    --pro-bg: #FFFFFF;
-    --pro-bg-card: #F5F5F5;
-    --pro-text: #1A1A1A;
-    --pro-text-soft: #555555;
-    --pro-accent: #2E2E2E;
-    --pro-border: #DDDDDD;
+    color-scheme: dark;
+
+    /* Paleta Profesional - dark */
+    --pro-bg: #121212;
+    --pro-bg-card: #1E1E1E;
+    --pro-text: #E0E0E0;
+    --pro-text-soft: #A0A0A0;
+    --pro-accent: #333333;
+    --pro-border: #2A2A2A;
     --pro-hover: #444444;
 
-    /* Paleta Personal (melancholic cozy) */
-    --per-bg: #F0EAF4;
-    --per-bg-card: #E8F0F7;
-    --per-text: #2E2E2E;
-    --per-text-soft: #7A7A8C;
-    --per-accent: #C9B8D8;
-    --per-accent-warm: #F2C4CE;
-    --per-border: #C9B8D8;
+    /* Paleta Personal - melancholic cozy dark */
+    --per-bg: #1A181C;
+    --per-bg-card: #232126;
+    --per-text: #E5E1E6;
+    --per-text-soft: #A29DA8;
+    --per-accent: #6B5E78;
+    --per-accent-warm: #8A6B72;
+    --per-border: #3A3542;
 
-    /* Tipografía */
+    /* Tipografia */
     --font-title-pro: 'Roboto', sans-serif;
     --font-title-per: 'Playfair Display', serif;
     --font-body: 'Nunito', sans-serif;
@@ -82,7 +87,7 @@ p  { font-size: 1rem; min-font-size: 14px; }
    PÁGINA DE INICIO (index)
    ============================================ */
 body.inicio {
-    background: linear-gradient(135deg, #F0EAF4 0%, #E8F0F7 100%);
+    background: linear-gradient(135deg, #1A181C 0%, #121212 100%);
     color: var(--per-text);
     font-family: var(--font-body);
     display: flex;
@@ -185,12 +190,12 @@ body.inicio {
 
 /* Header profesional */
 .site-header.pro {
-    background-color: var(--pro-accent);
-    border-color: #111;
+    background-color: #1E1E1E;
+    border-color: #2A2A2A;
 }
 
 .site-header.pro .site-title {
-    color: #FFFFFF;
+    color: #E0E0E0;
     font-family: var(--font-title-pro);
     font-size: 1.3rem;
     font-weight: 700;
@@ -198,7 +203,7 @@ body.inicio {
 }
 
 .site-header.pro nav a {
-    color: #CCCCCC;
+    color: #A0A0A0;
     padding: 6px 14px;
     border-radius: 6px;
     font-size: 0.95rem;
@@ -206,12 +211,12 @@ body.inicio {
 
 .site-header.pro nav a:hover {
     background-color: var(--pro-hover);
-    color: #FFFFFF;
+    color: #E0E0E0;
 }
 
 /* Header personal */
 .site-header.per {
-    background-color: rgba(240, 234, 244, 0.92);
+    background-color: rgba(26, 24, 28, 0.95);
     backdrop-filter: blur(6px);
     border-color: var(--per-border);
 }
@@ -252,12 +257,12 @@ body.inicio {
 }
 
 .site-footer.pro {
-    background-color: var(--pro-accent);
-    color: #CCCCCC;
-    border-color: #111;
+    background-color: #1E1E1E;
+    color: #A0A0A0;
+    border-color: #2A2A2A;
 }
 
-.site-footer.pro a { color: #FFFFFF; }
+.site-footer.pro a { color: #E0E0E0; }
 .site-footer.pro a:hover { text-decoration: underline; }
 
 .site-footer.per {
@@ -338,7 +343,7 @@ body.profesional {
 }
 
 .tabla-habilidades tr:hover td {
-    background-color: #EEEEEE;
+    background-color: #333333;
 }
 
 /* Proyectos */
@@ -536,8 +541,8 @@ body.personal {
 
 .gameplay-tag {
     display: inline-block;
-    background-color: var(--per-text);
-    color: var(--per-accent-warm);
+    background-color: var(--per-accent);
+    color: #FFFFFF;
     font-size: 0.75rem;
     font-weight: 700;
     padding: 3px 12px;
@@ -546,7 +551,7 @@ body.personal {
 
 /* Tag "Sin mods" — variante más suave */
 .gameplay-tag.sin-mods {
-    background-color: var(--per-text-soft);
+    background-color: var(--per-accent-warm);
     color: #FFFFFF;
 }
 
@@ -581,7 +586,7 @@ body.personal {
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background-color: #555555;
+    background-color: #333333;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -589,14 +594,14 @@ body.personal {
 }
 
 .icon-circle-pro:hover {
-    background-color: #888888;
+    background-color: #555555;
 }
 
 .icon-circle-per {
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    background-color: var(--per-text);
+    background-color: var(--per-accent);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -604,7 +609,7 @@ body.personal {
 }
 
 .icon-circle-per:hover {
-    background-color: var(--per-text-soft);
+    background-color: var(--per-accent-warm);
 }
 
 .footer-inicio-link {
